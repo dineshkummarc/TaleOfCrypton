@@ -1,0 +1,384 @@
+@font-face {
+  font-family: myFont;
+  src: url(../fonts/Felixti.TTF);
+}
+@font-face {
+  font-family: myFonta;
+  src: url(../fonts/PRISTINA.TTF);
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+      body{
+        overflow: hidden;
+        text-align: center;
+      }
+      img.background{
+        text-align: center;
+        min-width: 100%;
+        height: 100vh;
+        z-index: 0;
+      }
+      img.istelogo{
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        text-align: center;
+        min-width: 100px;
+        height: 100px;
+        z-index: 1;
+      }
+      img.anbtlogo{
+        position: fixed;
+        top: 10px;
+        right: 100px;
+        text-align: center;
+        min-width: 100px;
+        height: 100px;
+        z-index: 1;
+      }
+      img.gameof{
+        position: fixed;
+        top: 130px;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, 0);
+        text-align: center;
+        min-width: 100px;
+        z-index: 1;
+      }
+
+      header{
+        position: fixed;
+        z-index: 99;
+      }
+      nav{
+        position: fixed;
+        top:-100vh;
+        left:0;
+        width:100%;
+        height: 100vh;
+        background: rgba(0,0,0,.8);
+        transition: 1s;
+      }
+      nav.active{
+        top:0;
+      }
+      nav ul{
+        display: block;
+        list-style: none;
+        margin-top: 180px;
+        padding: 0;
+      }
+      nav ul li{
+        text-align: center;
+        flex-grow: 1;
+        margin: 35px;
+        margin-bottom: 80px;
+        font-size: 30px;
+      }
+      nav ul li a{
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: 1s;
+        font-family: myFont;
+      }
+      nav ul li a:hover{
+        border-bottom: 2px solid white;
+        color: blue;
+        text-decoration: none;
+      }
+      header div{
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        padding: 20px;
+        background: black;
+        color: white;
+        border-radius: 2px;
+        transition: 1s;
+      }
+      header div:hover{
+        opacity: .8;
+      }
+      footer{
+        z-index: 1;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.5);
+      }
+      footer a{
+        position: fixed;
+        bottom: -5px;
+        color: #000;
+        text-decoration: none;
+        font-family: myFonta;
+      }
+      footer a:first-child{
+        left: 0;
+        z-index: 1;
+      }
+      footer a:last-child{
+        text-align: right;
+        right: 0;
+      }
+      footer a img{
+        width: 40px;
+        margin: 10px;
+      }
+      footer a span{
+        position: fixed;
+        bottom: 5px;
+        left: 80px;
+        font-size: 30px;
+        transform: translate(-14px, 0);
+      }
+      footer a:last-child span{
+        position: fixed;
+        bottom: 5px;
+        right: 50px;
+        font-size: 30px;
+        transform: translate(-14px, 0);
+      }
+
+
+
+      
+      .opaque-navbar {
+        background-color: rgba(0,0,0,.5);
+        height: 55px;
+        transition: background-color 0.5s ease 0s;
+        text-shadow: 2px 2px 2px black;
+      }
+      .welcome-user{
+        color:#cb9f1a;
+        padding-top: 10px;
+      }
+      .container{
+        margin-top:150px;
+      }
+      .row{
+        margin-bottom:10px;
+        transition:transform .2s;
+        max-width: max-content;
+      }
+      .row a {
+        font-size:50px;
+        color:#cb9f1a;
+        text-decoration: none;
+        text-shadow: 2px 2px 2px black;
+      }
+      .row:hover {
+        -ms-transform: scale(1.5); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.2); 
+      }
+      a.backbtn{
+        position: fixed;
+        top: -20px;
+        left: -20px;  
+        text-decoration: none;
+        color: black;
+      }
+      a.hintbtn{
+        position: fixed;
+        top: 20px;
+        right: 20px;  
+        text-decoration: none;
+        color: black;
+        height: 100px;
+      }
+      .questionbox{
+        margin-top: 30px;
+        padding: 10px;
+        background: rgba(194, 178, 128, .3);
+        border-radius: 20px;
+        width: 50%;
+        font-family: myFont;
+      } 
+      .qimgbox{
+        padding: 2px;
+        background: rgba(194, 178, 128, .3);
+        border-radius: 20px;
+        margin-bottom: 20px;
+      }   
+      .qimg{
+        width: 100%;
+        border-radius: 20px;
+      }
+      .qtxt{
+        font-weight: bold;
+        padding: 10px;
+        margin-bottom: 5px;
+        font-size: 1.3em;
+      }
+      .abox{
+        padding: 10px;
+        border-radius: 10px;
+        background: rgba(194, 178, 128, .5);
+      }
+      .ansbox{
+        width: 79%;
+        font-size: 1.2em;
+        background: none;
+        border: none;
+        border-bottom: 1px solid black;
+        padding: 10px;
+      }
+      .ansbox::placeholder{
+        color: #303030;
+      }
+      .ansbtn{
+        min-width: 20%;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        font-family: myFont;
+        transition: .5s;
+      }
+      .ansbtn:hover{
+        background: grey;
+      }
+      .table{
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 40px;
+        margin-bottom: 80px;
+        background: rgba(128, 128, 128, .7);
+      }
+
+
+      .rulebox img{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 80%;
+        width: 400px;
+        border-radius: 10px;
+        transition: .4s;
+        box-shadow: -2px 2px 5px #874406;
+      }
+      .rulebox img:nth-child(1){
+        transform: translate(-0%,-55%) scale(1);
+        z-index: 6;
+      }
+      .rulebox img:nth-child(2){
+        transform: translate(-16%,-55%) scale(.98);
+        z-index: 5;
+      }
+      .rulebox img:nth-child(3){
+        transform: translate(-34%,-55%) scale(.96);
+        z-index: 4;
+      }
+      .rulebox img:nth-child(4){
+        transform: translate(-50%,-55%) scale(.94);
+        z-index: 3;
+      }
+      .rulebox img:nth-child(5){
+        transform: translate(-66%,-55%) scale(.92);
+        z-index: 2;
+      }
+      .rulebox img:nth-child(6){
+        transform: translate(-84%,-55%) scale(.90);
+        z-index: 1;
+      }
+      .rulebox img:nth-child(7){
+        transform: translate(-100%,-55%) scale(.88);
+        z-index: 0;
+      }
+      .rulebox img:nth-child(1):hover{
+        transform: translate(-0%,-55%) scale(1.02);
+        z-index: 7;
+      }
+      .rulebox img:nth-child(2):hover{
+        transform: translate(-16%,-55%) scale(1.00);
+        z-index: 7;
+      }
+      .rulebox img:nth-child(3):hover{
+        transform: translate(-34%,-55%) scale(.98);
+        z-index: 7;
+      }
+      .rulebox img:nth-child(4):hover{
+        transform: translate(-50%,-55%) scale(.96);
+        z-index: 7;
+      }
+      .rulebox img:nth-child(5):hover{
+        transform: translate(-66%,-55%) scale(.94);
+        z-index: 7;
+      }
+      .rulebox img:nth-child(6):hover{
+        transform: translate(-84%,-55%) scale(.92);
+        z-index: 7;
+      }
+      .rulebox img:nth-child(7):hover{
+        transform: translate(-100%,-55%) scale(.90);
+        z-index: 7;
+      }
+      
+      @media(max-width: 768px){
+        footer{
+          height: 90px;
+        }
+        footer a{
+          bottom: 35px;
+        }
+        footer a:last-child{
+          bottom: -5px;
+        }
+        footer a span{
+          bottom: 50px;
+          left: 80px;
+          font-size: 25px;
+        }
+        footer a:last-child span{
+          bottom: 10px;
+          right: 50px;
+          font-size: 25px;
+        }
+        .container{
+          transform: scale(.6);
+          margin-top:120px;
+        } 
+        .questionbox{
+          margin-top: 70px;
+          padding: 10px;
+          background: rgba(170, 170, 170, .7);
+          border-radius: 20px;
+          width: 90%;
+        } 
+        a.backbtn{
+          top: -50px;
+          left: -40px;
+        }
+        a.hintbtn{
+          top: 0px;
+          right: 0px;
+        }
+        
+        img.istelogo{
+          min-width: 60px;
+          height: 60px;
+        }
+        img.anbtlogo{
+          min-width: 60px;
+          height: 60px;
+        }
+        .rulebox img{
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          height: 70%;
+          width: 50%;
+          border-radius: 10px;
+          transition: .5s;
+          box-shadow: -2px 2px 5px #874406;
+        } 
+      }
