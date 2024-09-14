@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'https://toc19.isteknit.org/';
+$config['base_url'] = 'http://local.rocket.co.in:8081/TaleOfCrypton/';
 
 /*
 |--------------------------------------------------------------------------
